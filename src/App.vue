@@ -8,7 +8,7 @@
       <ul>
         <li v-for="(item, index) in newTodoList" :key="item.id">
           <div>
-            <input type="checkbox" v-model="item.completed" :value="item.content" />
+            <input type="checkbox" v-model="item.completed" />
             <label @dblclick="changeOther(item)" v-show="item.flag">{{item.content}}</label>
             <button @click="destroyTodoList(index)">x</button>
           </div>
